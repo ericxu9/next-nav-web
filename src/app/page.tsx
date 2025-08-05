@@ -13,6 +13,7 @@ import {
 } from "@/data/sites";
 import { FiGrid, FiList } from "react-icons/fi";
 import { Button } from "@/components/ui/button";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -238,8 +239,9 @@ export default function Home() {
               </div>
             )}
           </div>
-        </main>
-      </div>
-    </div>
-  );
-}
+                 </main>
+       </div>
+       <ScrollToTop />
+     </div>
+   );
+ }
