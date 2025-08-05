@@ -153,33 +153,7 @@ export default function Home() {
               </div>
             )}
 
-            {/* 全部网站页面显示视图切换按钮 */}
-            {!selectedCategory && !searchQuery && (
-              <div className="mb-6 sm:mb-8">
-                <div className="flex justify-end">
-                  <div className="flex items-center space-x-2">
-                    <Button
-                      variant={viewMode === "grid" ? "secondary" : "ghost"}
-                      size="icon"
-                      onClick={() => setViewMode("grid")}
-                      className="h-10 w-10"
-                    >
-                      <FiGrid className="h-4 w-4" />
-                      <span className="sr-only">网格视图</span>
-                    </Button>
-                    <Button
-                      variant={viewMode === "list" ? "secondary" : "ghost"}
-                      size="icon"
-                      onClick={() => setViewMode("list")}
-                      className="h-10 w-10"
-                    >
-                      <FiList className="h-4 w-4" />
-                      <span className="sr-only">列表视图</span>
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            )}
+
 
             {/* 内容区域 */}
             {!selectedCategory && !searchQuery ? (
@@ -191,12 +165,36 @@ export default function Home() {
                   
                   return (
                     <div key={category.id} className="space-y-4">
-                      {/* 分类标题 */}
-                      <div className="pb-3">
-                        <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">
-                          {category.name}
-                        </h2>
-                      </div>
+                                             {/* 分类标题 */}
+                       <div className="pb-3">
+                         <div className="flex items-center justify-between">
+                           <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">
+                             {category.name}
+                           </h2>
+                           {categories.indexOf(category) === 0 && (
+                             <div className="flex items-center space-x-2">
+                               <Button
+                                 variant={viewMode === "grid" ? "secondary" : "ghost"}
+                                 size="icon"
+                                 onClick={() => setViewMode("grid")}
+                                 className="h-10 w-10"
+                               >
+                                 <FiGrid className="h-4 w-4" />
+                                 <span className="sr-only">网格视图</span>
+                               </Button>
+                               <Button
+                                 variant={viewMode === "list" ? "secondary" : "ghost"}
+                                 size="icon"
+                                 onClick={() => setViewMode("list")}
+                                 className="h-10 w-10"
+                               >
+                                 <FiList className="h-4 w-4" />
+                                 <span className="sr-only">列表视图</span>
+                               </Button>
+                             </div>
+                           )}
+                         </div>
+                       </div>
                       
                       {/* 该分类下的网站 */}
                       <div

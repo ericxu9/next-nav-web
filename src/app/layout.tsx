@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
@@ -8,13 +8,17 @@ export const metadata: Metadata = {
   description: "一个简洁美观的网站导航平台，收集整理各类优质网站资源",
   keywords: "网站导航, 网址导航, 网站大全, 导航网站",
   authors: [{ name: "ericxu" }],
-  viewport: "width=device-width, initial-scale=1",
   robots: "index, follow",
   icons: {
     icon: '/favicon.svg',
     shortcut: '/favicon.svg',
     apple: '/favicon.svg',
   },
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
 };
 
 export default function RootLayout({
