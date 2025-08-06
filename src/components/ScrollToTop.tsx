@@ -6,6 +6,12 @@ import { Button } from "@/components/ui/button";
 
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  // 避免水合不匹配
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // 检测滚动位置
   useEffect(() => {
@@ -29,6 +35,11 @@ export default function ScrollToTop() {
     });
   };
 
+  // 在客户端渲染之前不显示
+  if (!mounted) {
+    return null;
+  }
+
   return (
     <>
       {isVisible && (
@@ -38,7 +49,7 @@ export default function ScrollToTop() {
           className="fixed bottom-6 right-6 z-50 h-12 w-12 rounded-full shadow-lg bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-600 transition-all duration-300 ease-in-out hover:scale-110"
           aria-label="回到顶部"
         >
-          <FiArrowUp className="h-5 w-5" />
+          <FiArrowUp className="h-5 w-5 text-gray-700 dark:text-gray-200" />
         </Button>
       )}
     </>
