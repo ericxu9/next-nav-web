@@ -191,6 +191,15 @@ export const sites: Site[] = [
     category: "design",
     tags: ["设计", "协作"],
   },
+  {
+    id: "excalidraw",
+    name: "Excalidraw",
+    url: "https://excalidraw.com",
+    description: "本地白板绘制工具",
+    icon: "FcCloseUpMode",
+    category: "design",
+    tags: ["设计", "创意"],
+  },
   // 效率工具
   {
     id: "notion",
@@ -286,7 +295,7 @@ export const getSitesByCategory = (categoryId: string): Site[] => {
 // 搜索网站
 export const searchSites = (query: string): Site[] => {
   const lowercaseQuery = query.toLowerCase();
-  
+
   return sites.filter((site) => {
     return (
       site.name.toLowerCase().includes(lowercaseQuery) ||
