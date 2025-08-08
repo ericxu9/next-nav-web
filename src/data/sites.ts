@@ -202,12 +202,21 @@ export const sites: Site[] = [
   },
   {
     id: "vectorcraftr",
-    name: "VectorCraftr",
+    name: "vectorCraftr",
     url: "https://vectorcraftr.com",
     description: "免费可商用的插图",
     icon: "FcCloseUpMode",
     category: "design",
-    tags: ["设计", "创意"],
+    tags: ["设计", "创意", "插图"],
+  },
+  {
+    id: "undraw",
+    name: "unDraw",
+    url: "https://undraw.co",
+    description: "开源插图，支持实时颜色修改",
+    icon: "FcCloseUpMode",
+    category: "design",
+    tags: ["设计", "创意", "插图"],
   },
   // 效率工具
   {
