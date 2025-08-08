@@ -200,6 +200,15 @@ export const sites: Site[] = [
     category: "design",
     tags: ["设计", "创意"],
   },
+  {
+    id: "vectorcraftr",
+    name: "VectorCraftr",
+    url: "https://vectorcraftr.com",
+    description: "免费可商用的插图",
+    icon: "FcCloseUpMode",
+    category: "design",
+    tags: ["设计", "创意"],
+  },
   // 效率工具
   {
     id: "notion",
