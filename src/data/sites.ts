@@ -218,6 +218,15 @@ export const sites: Site[] = [
     category: "design",
     tags: ["设计", "创意", "插图"],
   },
+  {
+    id: "icons8",
+    name: "icons8",
+    url: "https://icons8.com",
+    description: "免费图标网站",
+    icon: "FcCloseUpMode",
+    category: "design",
+    tags: ["设计", "创意", "图标"],
+  },
   // 效率工具
   {
     id: "notion",
