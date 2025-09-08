@@ -264,6 +264,24 @@ export const sites: Site[] = [
     category: "productivity",
     tags: ["效率", "网络", "拨测"],
   },
+  {
+    id: "semrush",
+    name: "Semrush",
+    url: "https://www.semrush.com",
+    description: "SEO工具",
+    icon: "FcNetwork",
+    category: "productivity",
+    tags: ["效率", "SEO"],
+  },
+  {
+    id: "similarweb",
+    name: "Similarweb",
+    url: "https://www.similarweb.com",
+    description: "网站数据分析工具",
+    icon: "FcNetwork",
+    category: "productivity",
+    tags: ["效率", "网站", "数据分析"],
+  },
   // 学习教育
   {
     id: "coursera",
